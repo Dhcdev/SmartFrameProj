@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{kCwQ:function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),o=e.n(a);t.default=function(){return o.a.createElement("h1",null,"Mostrando Display do tablet")}}}]);
+//# sourceMappingURL=component---src-pages-d-js-68b5f19d708b9bbb9360.js.map
