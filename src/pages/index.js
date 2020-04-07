@@ -44,6 +44,10 @@ const Index = () => {
             })
             setData(docs)
         })
+          setInterval(() =>{
+              setValor(old => old + 1)
+          },1000)
+
     }, [])
     const increment = () => {
         setValor(valorAntigo => valorAntigo + 1)
@@ -53,11 +57,14 @@ const Index = () => {
     }
     return(
       <Layout> 
-       <Helmet>
-         
-         <meta name="description" value="Test" />
-       
-       </Helmet>
+        <Helmet>
+
+      { valor % 2 === 1 && <title>Teste</title> }    
+      { valor % 2 === 0 && <title>(🔔) Notification</title> }    
+
+        <meta name="description" value="Test" />
+
+        </Helmet>
      
     
         <div className='bg-gray-200 md:overflow-hidden'>
@@ -109,13 +116,13 @@ style={{ marginTop: '-320px', borderRadius: '20px'}}
   style={{zIndex: '-1'}}
 ></div>
 
-<div className='h-10 bg-white rounded-t-lg border-b border-gray-100'></div>
-<div className='flex' style={{height: '550px'}}>
-  <div className='w-32 bg-gray-200 p-6 overflow-hidden rounded-bl-lg'>
-    <div className='text-center mb-10'>
-      <div className='w-10 h-10 rounded-full bg-blue-800 mb-4 mx-auto'></div>
-      <div className='h-2 rounded-full bg-blue-800'></div>
-    </div>
+  <div className='h-10 bg-white rounded-t-lg border-b border-gray-100'></div>
+   <div className='flex' style={{height: '550px'}}>
+     <div className='w-32 bg-gray-200 p-6 overflow-hidden rounded-bl-lg'>
+       <div className='text-center mb-10'>
+        <div className='w-10 h-10 rounded-full bg-blue-800 mb-4 mx-auto'></div>
+         <div className='h-2 rounded-full bg-blue-800'></div>
+      </div>
 
     <div className='text-center mb-10'>
       <div className='w-10 h-10 rounded-full bg-gray-300 mb-4 mx-auto'></div>
@@ -129,7 +136,7 @@ style={{ marginTop: '-320px', borderRadius: '20px'}}
 
     <div className='text-center'>
       <div className='w-10 h-10 rounded-full bg-gray-300 mb-4 mx-auto'></div>
-      <div className='h-2 rounded-full bg-gray-300'></div>
+       <div className='h-2 rounded-full bg-gray-300'></div>
     </div>
   </div>
   <div className='flex-1 py-6 px-8'>
